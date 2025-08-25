@@ -8,20 +8,11 @@
         .bg-wave {
             background: linear-gradient(160deg, #FF5C8D, #FF8CA1);
             height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            color: white;
-            font-family: 'Arial', sans-serif;
-            text-align: center;
+            display: flex; justify-content: center; align-items: center; flex-direction: column;
+            color: white; font-family: 'Arial', sans-serif; text-align: center;
         }
         .btn-custom {
-            border-radius: 25px;
-            width: 120px;
-            margin: 10px;
-            border: 2px solid white;
-            color: white;
+            border-radius: 25px; width: 120px; margin: 10px; border: 2px solid white; color: white;
         }
         .btn-custom:hover { background-color: white; color: #FF5C8D; }
     </style>

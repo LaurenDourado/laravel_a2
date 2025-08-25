@@ -4,17 +4,26 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 
-Route::get('/', function() { return view('welcome'); })->name('home');
+// Home
+Route::get('/', fn() => view('welcome'))->name('home');
 
-Route::get('/register', [AuthController::class, 'showRegister'])->name('register');
-Route::post('/register', [AuthController::class, 'register']);
+// Login & Registro
+Route::get('/login',    [AuthController::class,'showLogin'])->name('login');
+Route::post('/login',   [AuthController::class,'login']);
+Route::get('/register', [AuthController::class,'showRegister'])->name('register');
+Route::post('/register',[AuthController::class,'register']);
 
-Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
-Route::post('/login', [AuthController::class, 'login']);
+// Dashboard e logout (protegidos)
+Route::middleware('auth.session')->group(function () {
+    Route::get('/dashboard', [AuthController::class,'dashboard'])->name('dashboard');
+    Route::get('/logout',    [AuthController::class,'logout'])->name('logout');
+});
 
-Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
+// Esqueceu a senha (SEM exigir login)
+Route::get('/edit-password',  [AuthController::class,'showEditPassword'])->name('edit.password');
+Route::post('/edit-password', [AuthController::class,'editPassword']);
 
-Route::get('/edit-password', [AuthController::class, 'showEditPassword'])->name('edit.password');
-Route::post('/edit-password', [AuthController::class, 'editPassword']);
-
-Route::resource('users', UserController::class);
+// CRUD de usuários (protegido)
+Route::middleware('auth.session')->group(function () {
+    Route::resource('users', UserController::class);
+});
