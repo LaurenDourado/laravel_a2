@@ -7,10 +7,6 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-Perfeito! Aqui está um **README.md** que você pode colocar na raiz do seu projeto **UserManagement/**. Fiz no estilo acadêmico, explicando que o objetivo é **treinar técnicas em Laravel com Bootstrap**, com um passo a passo de instalação e uso.
-
----
-
 ```markdown
 # UserManagement - Projeto Acadêmico em Laravel
 
