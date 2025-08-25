@@ -54,8 +54,31 @@ O projeto é voltado apenas para **fins de aprendizado**, sem objetivos comercia
 
 ## 📂 Estrutura de Pastas
 
+---
+UserManagement/
+├─ app/
+│ ├─ Http/
+│ │ ├─ Controllers/
+│ │ │ ├─ AuthController.php # Controle de autenticação
+│ │ │ ├─ UserController.php # CRUD de usuários
+│
+├─ database/
+│ ├─ migrations/
+│ │ ├─ create_users_table.php # Estrutura da tabela de usuários
+│
+├─ resources/
+│ ├─ views/
+│ │ ├─ welcome.blade.php # Tela inicial
+│ │ ├─ login.blade.php # Tela de login
+│ │ ├─ register.blade.php # Tela de cadastro
+│ │ ├─ edit-password.blade.php # Tela de edição de senha
+│ │ ├─ dashboard.blade.php # Dashboard
+│
+├─ routes/
+│ ├─ web.php # Definição das rotas
 
 ---
+
 
 ## 🎓 Objetivo Acadêmico
 
