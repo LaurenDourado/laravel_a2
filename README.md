@@ -7,7 +7,6 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-```markdown
 # UserManagement - Projeto Acadêmico em Laravel
 
 ## 📌 Sobre o Projeto
@@ -15,8 +14,6 @@ Este é um **projeto acadêmico** desenvolvido com o intuito de **treinar técni
 O sistema implementa as principais operações de **CRUD (Create, Read, Update, Delete)**, além de fluxo de autenticação simples com **Login**, **Cadastro** e **Recuperação de Senha**.
 
 O projeto é voltado apenas para **fins de aprendizado**, sem objetivos comerciais.
-
----
 
 ## 🎯 Funcionalidades
 - **Tela Inicial (Welcome):**
@@ -52,7 +49,6 @@ O projeto é voltado apenas para **fins de aprendizado**, sem objetivos comercia
 ## 📂 Estrutura de Pastas
 
 ```
-
 UserManagement/
 ├─ app/
 │  ├─ Http/
@@ -75,51 +71,7 @@ UserManagement/
 ├─ routes/
 │  ├─ web.php                    # Definição das rotas
 
-````
-
----
-
-## ⚙️ Como Executar o Projeto
-
-### 1️⃣ Clonar o repositório
-```bash
-git clone https://github.com/seu-usuario/UserManagement.git
-cd UserManagement
-````
-
-### 2️⃣ Instalar dependências
-
-```bash
-composer install
-npm install && npm run dev
 ```
-
-### 3️⃣ Configurar o ambiente
-
-Crie o arquivo `.env` (copie do `.env.example`) e configure o banco de dados:
-
-```
-DB_DATABASE=laravel_a2
-DB_USERNAME=root
-DB_PASSWORD=
-```
-
-### 4️⃣ Executar as migrações
-
-```bash
-php artisan migrate
-```
-
-### 5️⃣ Rodar o servidor
-
-```bash
-php artisan serve
-```
-
-Acesse no navegador:
-👉 `http://127.0.0.1:8000`
-
----
 
 ## 🎓 Objetivo Acadêmico
 
