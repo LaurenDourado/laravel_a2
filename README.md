@@ -7,55 +7,139 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+Perfeito! Aqui está um **README.md** que você pode colocar na raiz do seu projeto **UserManagement/**. Fiz no estilo acadêmico, explicando que o objetivo é **treinar técnicas em Laravel com Bootstrap**, com um passo a passo de instalação e uso.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+```markdown
+# UserManagement - Projeto Acadêmico em Laravel
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 📌 Sobre o Projeto
+Este é um **projeto acadêmico** desenvolvido com o intuito de **treinar técnicas em Laravel** (framework PHP) e **Bootstrap** (framework CSS).  
+O sistema implementa as principais operações de **CRUD (Create, Read, Update, Delete)**, além de fluxo de autenticação simples com **Login**, **Cadastro** e **Recuperação de Senha**.
 
-## Learning Laravel
+O projeto é voltado apenas para **fins de aprendizado**, sem objetivos comerciais.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+---
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## 🎯 Funcionalidades
+- **Tela Inicial (Welcome):**
+  - Botão **Entrar** → leva para a tela de Login.
+  - Botão **Cadastrar** → leva para a tela de Cadastro.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- **Tela de Cadastro:**
+  - Permite registrar um novo usuário com Nome, Email e Senha.
+  - Após o cadastro, retorna à tela inicial para login.
 
-## Laravel Sponsors
+- **Tela de Login:**
+  - Autenticação via email e senha.
+  - Botão "Esqueceu a senha?" → direciona para a tela de Edição de Senha.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- **Tela de Edição de Senha:**
+  - Usuário pode redefinir Nome, Email e Nova Senha.
 
-### Premium Partners
+- **Dashboard:**
+  - Mostra a frase **"Estou Logado!"**.
+  - Contém botão **Sair** (logout).
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+---
 
-## Contributing
+## 🛠️ Tecnologias Utilizadas
+- **PHP 8+**
+- **Laravel 10**
+- **Bootstrap 5**
+- **Blade Templates**
+- **MySQL**
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## 📂 Estrutura de Pastas
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```
 
-## Security Vulnerabilities
+UserManagement/
+├─ app/
+│  ├─ Http/
+│  │  ├─ Controllers/
+│  │  │  ├─ AuthController.php   # Controle de autenticação
+│  │  │  ├─ UserController.php   # CRUD de usuários
+│
+├─ database/
+│  ├─ migrations/
+│  │  ├─ create\_users\_table.php  # Estrutura da tabela de usuários
+│
+├─ resources/
+│  ├─ views/
+│  │  ├─ welcome.blade.php       # Tela inicial
+│  │  ├─ login.blade.php         # Tela de login
+│  │  ├─ register.blade.php      # Tela de cadastro
+│  │  ├─ edit-password.blade.php # Tela de edição de senha
+│  │  ├─ dashboard.blade.php     # Dashboard
+│
+├─ routes/
+│  ├─ web.php                    # Definição das rotas
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+````
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## ⚙️ Como Executar o Projeto
+
+### 1️⃣ Clonar o repositório
+```bash
+git clone https://github.com/seu-usuario/UserManagement.git
+cd UserManagement
+````
+
+### 2️⃣ Instalar dependências
+
+```bash
+composer install
+npm install && npm run dev
+```
+
+### 3️⃣ Configurar o ambiente
+
+Crie o arquivo `.env` (copie do `.env.example`) e configure o banco de dados:
+
+```
+DB_DATABASE=laravel_a2
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+### 4️⃣ Executar as migrações
+
+```bash
+php artisan migrate
+```
+
+### 5️⃣ Rodar o servidor
+
+```bash
+php artisan serve
+```
+
+Acesse no navegador:
+👉 `http://127.0.0.1:8000`
+
+---
+
+## 🎓 Objetivo Acadêmico
+
+Este sistema foi desenvolvido para **fixar conceitos fundamentais do framework Laravel**, como:
+
+* Estrutura MVC.
+* Rotas e Controllers.
+* Views com Blade e estilização com Bootstrap.
+* CRUD completo em banco de dados.
+* Autenticação simples (login/logout).
+* Recuperação de senha básica.
+
+---
+
+## ✨ Autor
+
+Projeto acadêmico desenvolvido por Ana Lauren, com fins de aprendizado em **Laravel + Bootstrap**.
+
+```
