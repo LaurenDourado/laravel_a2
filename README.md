@@ -54,7 +54,6 @@ O projeto é voltado apenas para **fins de aprendizado**, sem objetivos comercia
 
 ## 📂 Estrutura de Pastas
 
----
 UserManagement/
 ├─ app/
 │ ├─ Http/
